@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    max-width: 1000px;
+    display: grid;
+    grid-template-areas: "h h h"
+                          "n n n"
+                          "a a as"
+                          "f f f";
+    margin: auto;
+}
+
+header{
+    grid-area: h;
+    color: green;
+}
+
+nav{
+    grid-area: n;
+    background-color: green;
+}
+
+article{
+    grid-area: a;
+}
+
+aside{
+    grid-area: as;
+    padding-top: 15px;
+}
+
+footer{
+    grid-area: f;
+    background-color: indigo;
+}
+
+img{
+    width: 100%;
+    padding: 5px;
+    border: 1px solid grey;
+}
+
+a:link{
+    text-decoration: none;
+}
+a{
+    color: indianred;
+}
+a:hover{
+    color: white;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: 100px 100px 200px;
+    list-style-type: none;
+}
+
+p{
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.tarolo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "k"
+                          "h";
+    padding: 5px;
+    margin: 10px;
+}
+
+.henry{
+    grid-template-columns: h;
+    border: 1px solid gray;
+    padding: 5px;
+}
+.karl{
+    grid-template-columns: k;
+    border: 1px solid gray;
+    padding: 5px;
+}
+.karl .henry, h2{
+    padding: 10px;
+    background-color: gray;
+    color: green;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px){
+    main{
+        display: grid;
+        grid-template-areas: "h"
+                            "n"
+                            "a"
+                            "as"
+                            "f";
+    }
+}
